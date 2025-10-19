@@ -1,0 +1,16 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for unu
+- name: Update APT cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Upgrade all packages
+  apt:
+    upgrade: dist
+
+- name: Autoremove and clean
+  apt:
+    autoremove: yes
+    autoclean: yes
